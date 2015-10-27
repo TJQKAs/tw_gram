@@ -12,7 +12,7 @@ $(function(){
     $.ajax({
       method: method,
       url: action,
-      data: data
+      data: data,
 
       dataType: 'script'
     });
