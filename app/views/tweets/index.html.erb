@@ -1,5 +1,5 @@
 
-<h1>My Tweets</h1>
+<h1>Here's what's happening!</h1>
 
 <% if current_user %>
     <%= form_for Tweet.new do |f| %>
@@ -17,11 +17,11 @@
     <% @tweets.each do |tweet| %>
       <li>
         <%= tweet.message %><br><br>
-        <%= link_to "delete tweet", tweet_path(tweet), method: 'delete' %>
+
+          <% if current_user && tweet.user_id == current_user.id %>
+          <%= link_to "delete tweet", tweet_path(tweet), method: 'delete' %>
+          <% end %>
       </li>
     <% end %>
 </ul>
   <% end %>
-
-
-<a href='#'>Add a tweet</a>

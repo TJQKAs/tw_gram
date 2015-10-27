@@ -6,10 +6,17 @@ class TweetsController < ApplicationController
   end
 
   def create
-    @tweet = Tweet.create(tweet_params)
-    respond_to do |format|
-      format.html { redirect_to root_path }
-      format.js {}
+    @tweet = current_user.tweets.new(tweet_params)
+
+    if @tweet.save
+
+      respond_to do |format|
+        format.html { redirect_to root_path }
+        format.js {}
+      end
+    else
+      render 'new'
+      format.js{}
     end
   end
 

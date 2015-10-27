@@ -53,12 +53,11 @@ feature "Once logged in on the website" do
   end
 
   it "can only edit tweets which they've created" do
-      click_link('Create Tweet')
-      fill_in 'message', with: 'Hello'
+      fill_in 'Message', with: 'Hello'
       click_button 'Create Tweet'
       click_link('Sign out')
       second_user = build :second_user
       sign_up(second_user)
-      expect(page).not_to have_content('Delete Tweet')
+      expect(page).not_to have_content('delete tweet')
   end
 end
