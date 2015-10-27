@@ -15,7 +15,7 @@
 
   <% if @tweets.any? %>
     <% @tweets.each do |tweet| %>
-      <br><%= tweet.user.email %><br>
+      <br><%= tweet.user.email if tweet.user %><br>
       <%= tweet.message %>
       posted at <%= tweet.created_at.strftime("%H:%M %d %b")%>
     <% if current_user && tweet.user_id == current_user.id %>
