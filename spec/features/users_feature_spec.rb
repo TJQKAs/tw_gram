@@ -15,7 +15,6 @@ feature "User can sign in and out" do
 
     it "must be logged in to create Tweets" do
     visit('/')
-    click_link('Create Tweet')
     expect(page).not_to have_button('Create Tweet')
   end
 

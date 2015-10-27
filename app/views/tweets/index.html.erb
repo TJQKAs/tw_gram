@@ -1,13 +1,14 @@
 
 <h1>My Tweets</h1>
 
-
-<%= form_for Tweet.new do |f| %>
-  <div class="form-group">
-    <%= f.label :message %>
-    <%= f.text_field :message, placeholder:"what needs doing?" %>
-    <%= f.submit %>
-  </div>
+<% if current_user %>
+    <%= form_for Tweet.new do |f| %>
+     <div class="form-group">
+      <%= f.label :message %>
+      <%= f.text_field :message, placeholder:"what needs doing?" %>
+     <%= f.submit %>
+    </div>
+  <% end %>
 <% end %>
 
 <ul>
