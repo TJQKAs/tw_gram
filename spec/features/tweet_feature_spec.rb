@@ -28,7 +28,7 @@ feature 'tweets' do
   context 'deleting tweets' do
     before { Tweet.create message: 'My first tweet' }
 
-    scenario 'user can delete a tweet' do
+    scenario 'urser can delete a tweet' do
       visit '/tweets'
       click_link 'delete tweet'
       expect(page).to have_content 'Tweet deleted successfully'
