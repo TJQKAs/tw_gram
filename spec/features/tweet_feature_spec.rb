@@ -18,6 +18,8 @@ feature 'tweets' do
 
   context 'adding tweets' do
     scenario 'prompts user to fill out form, then displays the new post' do
+      user = build :user
+      sign_up(user)
       visit '/tweets'
       fill_in 'Message', with: 'My first tweet'
       click_button 'Create Tweet'
@@ -29,6 +31,8 @@ feature 'tweets' do
     before { Tweet.create message: 'My first tweet' }
 
     scenario 'user can delete a tweet' do
+      user = build :user
+      sign_up(user)
       visit '/tweets'
       click_link 'delete tweet'
       expect(page).to have_content 'Tweet deleted successfully'
