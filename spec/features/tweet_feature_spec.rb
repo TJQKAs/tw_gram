@@ -28,12 +28,14 @@ feature 'tweets' do
   end
 
   context 'deleting tweets' do
-    before { Tweet.create message: 'My first tweet' }
+    before do
+     @user = create :user
+     @user.tweets.create message: 'My first tweet'
+    end
 
 
     scenario 'user can delete a tweet' do
-      user = build :user
-      sign_up(user)
+      sign_in(@user)
       visit '/tweets'
       click_link 'delete tweet'
       expect(page).to have_content 'Tweet deleted successfully'
