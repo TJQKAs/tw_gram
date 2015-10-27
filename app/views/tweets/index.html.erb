@@ -1,4 +1,6 @@
-
+<head>
+<%= stylesheet_link_tag 'application' %>
+</head>
 <h1>Here's what's happening!</h1>
 
 <% if current_user %>
@@ -13,10 +15,14 @@
 
 <ul>
 
+
+  <div class='feed'>
   <% if @tweets.any? %>
     <% @tweets.each do |tweet| %>
-      <br><%= tweet.user.email if tweet.user %><br>
-      <%= tweet.message %>
+
+      <br><%= image_tag tweet.user.avatar.url, :size => "50x50" if tweet.user %> <br>
+      <div id='username'><%= tweet.user.email if tweet.user %></div>
+      <div id='tweet'><br><%= tweet.message %><br></div>
       posted at <%= tweet.created_at.strftime("%H:%M %d %b")%>
     <% if current_user && tweet.user_id == current_user.id %>
       <br><%= link_to "delete tweet", tweet_path(tweet), method: 'delete' %><br>
@@ -26,3 +32,21 @@
     <% end %>
 </ul>
   <% end %>
+</div>
+
+<script type="text/javascript">
+
+$(function() {
+
+    getStatus();
+
+});
+
+function getStatus() {
+
+    $('div#feed').load('feed.php');
+    setTimeout("getStatus()",10000);
+
+}
+
+</script>

@@ -10,8 +10,8 @@
 
 
   <% if user_signed_in? %>
-    Welcome <%= current_user.email %>
-    <%= image_tag current_user.avatar.url(:thumb) %>
+    <br><%= image_tag current_user.avatar.url(:thumb) %>
+    <br>Welcome <%= current_user.email %><br>
     <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
     <% else %>
     <%= link_to "Sign in", new_user_session_path %>
