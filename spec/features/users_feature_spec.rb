@@ -12,6 +12,15 @@ feature "User can sign in and out" do
       visit('/')
       expect(page).not_to have_link('Sign out')
     end
+
+    it "must be logged in to create Tweets" do
+    visit('/')
+    click_link('Create Tweet')
+    expect(page).not_to have_button('Create Tweet')
+  end
+
+
+
   end
 
   context "user signed in on the homepage" do
@@ -34,5 +43,23 @@ feature "User can sign in and out" do
       expect(page).not_to have_link('Sign in')
       expect(page).not_to have_link('Sign up')
     end
+  end
+end
+
+
+feature "Once logged in on the website" do
+   before do
+      first_user = build :first_user
+      sign_up(first_user)
+  end
+
+  it "can only edit tweets which they've created" do
+      click_link('Create Tweet')
+      fill_in 'message', with: 'Hello'
+      click_button 'Create Tweet'
+      click_link('Sign out')
+      second_user = build :second_user
+      sign_up(second_user)
+      expect(page).not_to have_content('Delete Tweet')
   end
 end
