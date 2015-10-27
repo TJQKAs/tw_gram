@@ -1,3 +1,28 @@
 You have no tweets yet
 
+<h1>My Tweets</h1>
+
+<%= form_for Tweet.new do |f| %>
+  <div class="form-group">
+    <%= f.text_field :message, placeholder:
+    "what needs doing?" %>
+  </div>
+
+
+
+  <div class="form-group">
+  <%= f.submit %>
+  </div>
+<% end %>
+
+<ul>
+<% @tweets.each do |tweet| %>
+  <li>
+    <%= tweet.message %><br><br>
+    <%= link_to "done", tweet_path(tweet), method: 'delete' %>
+  </li>
+<% end %>
+</ul>
+
+
 <a href='#'>Add a tweet</a>
