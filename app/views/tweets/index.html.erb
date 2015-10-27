@@ -15,13 +15,14 @@
 
   <% if @tweets.any? %>
     <% @tweets.each do |tweet| %>
-      <li>
-        <%= tweet.message %><br><br>
-
-          <% if current_user && tweet.user_id == current_user.id %>
-          <%= link_to "delete tweet", tweet_path(tweet), method: 'delete' %>
-          <% end %>
-      </li>
+      <br><%= tweet.user.email %><br>
+      <%= tweet.message %>
+      posted at <%= tweet.created_at.strftime("%H:%M %d %b")%>
+    <% if current_user && tweet.user_id == current_user.id %>
+      <br><%= link_to "delete tweet", tweet_path(tweet), method: 'delete' %><br>
+      <% else %>
+      <br><br>
+    <% end %>
     <% end %>
 </ul>
   <% end %>
