@@ -21,8 +21,14 @@
     <%= f.password_field :password_confirmation, autocomplete: "off" %>
   </div>
 
+  <div class='field' align="center">
+    Add Your <%= f.label :avatar %>:
+    <%= f.file_field :avatar %>
+  </div>
+
+
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", :class => "btn btn-warning"%>
   </div>
 <% end %>
 
