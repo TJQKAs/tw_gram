@@ -14,11 +14,12 @@ body {background-image: url(http://limeshot.com/images/blog/twitter/bg-smooth.pn
   <% if user_signed_in? %>
     <br><%= image_tag current_user.avatar.url(:thumb) %>
     <br>Welcome @<%= current_user.username %><br>
-
+     <br align="center">
     <%= link_to "Sign out", destroy_user_session_path, method: :delete, :class => "btn btn-warning"%>
+  </br>
   <% else %>
-    <%= link_to "Sign in", new_user_session_path %>
-    <%= link_to "Sign up", new_user_registration_path %>
+    <%= link_to "Sign in", new_user_session_path,  :style => "display: none;" %>
+    <%= link_to "Sign up", new_user_registration_path,  :style => "display: none;" %>
   <% end %>
 
    <%= notice %>

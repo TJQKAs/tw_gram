@@ -4,11 +4,16 @@
 <h1>Here's what's happening!</h1>
 
 
+<% unless user_signed_in? %>
+  <%= link_to "Sign in", new_user_session_path, :class => "btn btn-warning" %>
+  <%= link_to "Sign up", new_user_registration_path, :class => "btn btn-warning" %>
+<% else %>
+  <%= link_to "Sign in", new_user_session_path, :style => "display: none;"%>
+  <%= link_to "Sign up", new_user_registration_path, :style => "display: none;" %>
+<% end %>
+
 
 <div class="form-group" > <%= render partial: "form" %> </div>
-
-
-
 
 
   <div class='feed'>

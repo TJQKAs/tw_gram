@@ -10,8 +10,9 @@ gem 'rails', '4.2.4'
 
 gem 'paperclip'
 
+gem "therubyracer"
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
-
 gem 'shoulda'
 # Use postgresql as the database for Active Record
 gem 'pg'
