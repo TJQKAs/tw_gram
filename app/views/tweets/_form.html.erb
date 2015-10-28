@@ -1,7 +1,11 @@
 <% if current_user %>
+
     <%= form_for Tweet.new do |f| %>
-      <%= f.label :message  %>
-      <%= f.text_field :message, placeholder:"what needs doing?", :class => 'tweet_area' %>
-      <%= f.submit %>
+      <%= f.label :message, :style => "display: none;"%>
+      <%= f.text_field :message, placeholder:"What needs doing?", :class => 'tweet_area' %>
+        <div vertical-align: bottom;>
+
+      <%= f.submit :class => "btn btn-warning" %>
+        </div>
     <% end %>
 <% end %>
