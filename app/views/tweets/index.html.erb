@@ -3,17 +3,12 @@
 </head>
 <h1>Here's what's happening!</h1>
 
-<% if current_user %>
-    <%= form_for Tweet.new do |f| %>
-     <div class="form-group">
-      <%= f.label :message %>
-      <%= f.text_field :message, placeholder:"what needs doing?" %>
-     <%= f.submit %>
-    </div>
-  <% end %>
-<% end %>
 
-<ul>
+
+  <div class="form-group" > <%= render partial: "form" %> </div>
+
+
+
 
 
   <div class='feed'>
@@ -33,20 +28,3 @@
 </ul>
   <% end %>
 </div>
-
-<script type="text/javascript">
-
-$(function() {
-
-    getStatus();
-
-});
-
-function getStatus() {
-
-    $('div#feed').load('feed.php');
-    setTimeout("getStatus()",10000);
-
-}
-
-</script>

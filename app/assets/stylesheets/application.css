@@ -56,3 +56,8 @@
 #username {
   color: red
 }
+
+input.tweet_area {
+  width: 350px;
+  height: 100px
+}
