@@ -27,10 +27,6 @@ class TweetsController < ApplicationController
     redirect_to root_path
     end
 
-  
-
-
-
   private
 
   def tweet_params
