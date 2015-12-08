@@ -31,3 +31,11 @@ Web version - https://calm-garden-3564.herokuapp.com/
 - ruby on rails
 - DataMapper
 - Bootstrap
+
+##### Running locally
+
+- clone this repo
+- run bundle install
+- use psql to create database (twittergram_development, twittergram_test)
+- type : rake db:migrate
+- run server: rails s
