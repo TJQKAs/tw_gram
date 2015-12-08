@@ -13,13 +13,13 @@ The program based on instagram-challenge, where you can chat and add photos, aft
 
 ## Production Team
 
-![Moe Sadoon](https://avatars3.githubusercontent.com/u/13087665?v=3&s=192) [Moe Sadoon](https://github.com/MoeSadoon)
+![Moe Sadoon](https://avatars3.githubusercontent.com/u/13087665?v=3&s=50) [Moe Sadoon](https://github.com/MoeSadoon)
 <br>
 ![Evgenii Leshchenko](https://avatars1.githubusercontent.com/u/13106572?v=3&s=50) [Evgenii Leshchenko](https://github.com/TJQKAs)
 <br>
-![Catherine Stevenson](https://avatars3.githubusercontent.com/u/13364432?v=3&s=192) [Catherine Stevenson](https://github.com/catherinestevenson)
+![Catherine Stevenson](https://avatars3.githubusercontent.com/u/13364432?v=3&s=50) [Catherine Stevenson](https://github.com/catherinestevenson)
 <br>
-![Sarah Kristine Pedersen](https://avatars3.githubusercontent.com/u/13555098?v=3&s=192) [Sarah Kristine Pedersen](https://github.com/sarahkristinepedersen)
+![Sarah Kristine Pedersen](https://avatars3.githubusercontent.com/u/13555098?v=3&s=50) [Sarah Kristine Pedersen](https://github.com/sarahkristinepedersen)
 
 ## Getting started
 
