@@ -1,24 +1,33 @@
 
-== README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Twitter-Gram
+================================
 
-Things you may want to cover:
+## Description
 
-* Ruby version
+The program based on instagram-challenge, where you can chat and add photos, after authentication.  
 
-* System dependencies
 
-* Configuration
+![Twitter-Gram screenshot](assets/images/Screen_template.png)
 
-* Database creation
 
-* Database initialization
+## Production Team
 
-* How to run the test suite
+![Moe Sadoon](https://avatars1.githubusercontent.com/u/13087665?v=3&s=400) [Moe Sadoon](https://github.com/MoeSadoon)
+<br>
+![Evgenii Leshchenko](https://avatars1.githubusercontent.com/u/13106572?v=3&s=50) [Evgenii Leshchenko](https://github.com/TJQKAs)
+<br>
+![Catherine Stevenson](https://avatars1.githubusercontent.com/u/13364432?v=3&s=400) [Catherine Stevenson](https://github.com/catherinestevenson)
+<br>
+![Sarah Kristine Pedersen](https://avatars1.githubusercontent.com/u/13555098?v=3&s=400) [Sarah Kristine Pedersen](https://github.com/sarahkristinepedersen)
 
-* Services (job queues, cache servers, search engines, etc.)
+## Getting started
 
-* Deployment instructions
+Web version - https://calm-garden-3564.herokuapp.com/
 
+## Technologies Used
+
+- ruby
+- ruby on rails
+- DataMapper
+- Bootstrap
